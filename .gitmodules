@@ -1,0 +1,3 @@
+[submodule "src/clue-ui"]
+	path = src/clue-ui
+	url = git@github.com:clue-ui/clue-ui.git
