@@ -1,6 +1,6 @@
 <template>
   <div class="app-login">
-    <div class="pt-24">
+    <div class="pt-32">
       <c-section class="login-form">
 
         <!-- title -->
