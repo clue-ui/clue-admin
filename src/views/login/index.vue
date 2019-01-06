@@ -25,7 +25,7 @@
               type="primary"
               class="w-full"
               @click="onLogin"
-            >登陆</c-button>
+            >登 陆</c-button>
           </c-form-item>
         </c-form>
       </c-section>
