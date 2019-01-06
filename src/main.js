@@ -10,6 +10,9 @@ import '@/clue-ui/style.scss'
 import ClueUI from '@/clue-ui'
 Vue.use(ClueUI)
 
+// import app style
+import '@/assets/style/index.scss'
+
 new Vue({
   router,
   store,

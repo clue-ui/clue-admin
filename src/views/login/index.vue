@@ -11,11 +11,21 @@
       </c-form-item>
 
       <c-form-item>
-        <c-button type="info">登陆</c-button>
+        <c-button type="info" @click="onLogin">登陆</c-button>
       </c-form-item>
     </c-form>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    onLogin () {
+      this.$router.push({name: 'home'})
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .app-login {

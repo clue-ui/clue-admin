@@ -7,9 +7,15 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '',
+      component: () => import(/* webpackChunkName: "layout" */ './layout/Main.vue'),
+      children: [
+        {
+          path: '/',
+          name: 'home',
+          component: Home
+        }
+      ]
     },
     {
       path: '/login',
