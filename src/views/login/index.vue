@@ -51,13 +51,13 @@ export default {
 
 <style lang="scss" scoped>
 .app-login {
-  @apply h-screen;
+  @apply min-h-screen;
   @apply text-center;
   @apply bg-grey;
 
   // login form
   .login-form {
-    @apply max-w-sm;
+    width: 25rem;
     @apply bg-white;
     @apply px-12 py-4 m-auto;
   }
