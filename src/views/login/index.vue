@@ -13,7 +13,7 @@
           </c-form-item>
 
           <c-form-item>
-            <c-input placeholder="输入密码"></c-input>
+            <c-input type="password" placeholder="输入密码"></c-input>
           </c-form-item>
 
           <c-form-item>

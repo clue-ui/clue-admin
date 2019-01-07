@@ -1,0 +1,31 @@
+<template>
+  <nav class="app-nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+
+    <div class="inline-block w-2/3"></div>
+    <router-link to="/login">Login</router-link>
+  </nav>
+</template>
+
+<script>
+export default {
+  name: 'app-nav'
+}
+</script>
+
+<style lang="scss" scoped>
+.app-nav {
+  @apply bg-blue-lighter;
+  @apply p-2;
+
+  & a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  & a.router-link-exact-active {
+    color: #42b983;
+  }
+}
+</style>
