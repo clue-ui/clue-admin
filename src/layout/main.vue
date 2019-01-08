@@ -15,17 +15,22 @@
         <div class="bg-teal p-4">footer</div>
       </div>
     </div>
+
+    <!-- float tools -->
+    <app-float-bar></app-float-bar>
   </div>
 </template>
 
 <script>
 import appNav from './nav'
 import appAside from './aside'
+import appFloatBar from './float-bar'
 
 export default {
   components: {
     appNav,
-    appAside
+    appAside,
+    appFloatBar
   }
 }
 </script>
