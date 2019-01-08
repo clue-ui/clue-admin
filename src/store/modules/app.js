@@ -9,16 +9,19 @@
 const store = {
   namespaced: true,
   state: {
-    adide: true,
+    asideVisible: true,
     abc: 'aaaa'
   },
   mutations: {
-    increment (state, val) {
-      state.abc = val
-    }
+
   },
   actions: {
-
+    increment ({state}, val) {
+      state.abc = val
+    },
+    setAside ({state}, val) {
+      state.asideVisible = val
+    }
   }
 }
 

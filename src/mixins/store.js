@@ -19,7 +19,15 @@ import { mapState } from 'vuex'
 let storeApp = {
   computed: mapState({
     storeApp: state => state.app,
-  })
+  }),
+  // methods: {
+  //   increment (val) {
+  //     this.$store.commit('app/increment', val)
+  //   }
+  // },
+  // increment: function (val) {
+  //   console.log(';;;', val)
+  // }
 }
 
 let storeUser = {

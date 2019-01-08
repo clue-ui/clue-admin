@@ -3,7 +3,7 @@
     <app-nav></app-nav>
 
     <div class="flex flex-1 items-stretch">
-      <app-aside>aside</app-aside>
+      <app-aside v-if="storeApp.asideVisible === true">aside</app-aside>
 
       <!-- container -->
       <div class="flex-1 flex flex-col bg-grey-lighter p-2">
@@ -26,11 +26,16 @@ import appNav from './nav'
 import appAside from './aside'
 import appFloatBar from './float-bar'
 
+import { storeApp } from '@/mixins/store'
 export default {
+  mixins: [storeApp],
   components: {
     appNav,
     appAside,
     appFloatBar
+  },
+  mounted () {
+    // console.log('[storeApp] ', this.storeApp)
   }
 }
 </script>

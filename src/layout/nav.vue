@@ -19,7 +19,7 @@ export default {
   },
   watch: {
     model: function (val) {
-      this.$store.commit('app/increment', val)
+      this.$store.dispatch('app/increment', val)
     }
   }
 }

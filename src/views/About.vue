@@ -12,20 +12,11 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import { storeApp, storeUser } from '@/mixins/store'
 export default {
   mixins: [storeApp, storeUser],
-  watch: {
-    storeApp: {
-      deep: true,
-      handler: (val) => {
-        console.log('watch:', val)
-      }
-    }
-  },
   mounted () {
-    console.log('>>>options: ', storeApp)
+    // console.log('>>>options: ', storeApp)
     // console.log('>>>store: ', this.$store.state.app)
   }
 }
