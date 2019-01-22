@@ -1,5 +1,5 @@
 <template>
-  <aside class="app-aside">
+  <aside class="app-aside hidden sm:block">
     <p v-for="a in 1,13" :key=a>
       {{a}} - aside
     </p>

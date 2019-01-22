@@ -9,8 +9,11 @@
 const store = {
   namespaced: true,
   state: {
-    asideVisible: true,
-    abc: 'aaaa'
+    title: 'clue-admin',
+    version: '0.1',
+
+    // 是否显示默认侧边栏
+    asideVisible: true
   },
   mutations: {
 
