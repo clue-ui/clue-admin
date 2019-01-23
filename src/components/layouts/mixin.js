@@ -9,6 +9,11 @@ const mixin = {
   methods: {
     asideSwitch () {
       let asideVisible = this.storeApp.asideVisible
+
+      // if (asideVisible === 'auto') {
+      //   asideVisible = true | false
+      // }
+
       this.$store.dispatch('app/setAside', !asideVisible)
     }
   }

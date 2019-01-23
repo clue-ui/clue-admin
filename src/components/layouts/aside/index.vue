@@ -1,5 +1,5 @@
 <template>
-  <aside class="app-aside">
+  <aside class="app-aside" :style="styleObject">
 
     <div class="app-logo">
       <div class="text-center flex-1 self-center">logo</div>
@@ -21,9 +21,16 @@ export default {
   },
   computed: {
     styleObject: function () {
-      return {
-        display: this.storeApp.asideVisible ? 'block' : 'none'
+      let asideVisible = this.storeApp.asideVisible
+
+      // 非自适应模式
+      if (asideVisible !== 'auto') {
+        return {
+          display: asideVisible ? 'block' : 'none'
+        }
       }
+
+      return null
     }
   }
 }

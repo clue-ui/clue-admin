@@ -34,10 +34,7 @@ export default {
     //
   },
   methods: {
-    asideSwitch () {
-      let asideVisible = this.storeApp.asideVisible
-      this.$store.dispatch('app/setAside', !asideVisible)
-    }
+    // todo
   }
 }
 </script>
