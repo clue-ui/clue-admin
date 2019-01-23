@@ -1,45 +1,41 @@
 <template>
-  <div class="flex flex-col min-h-screen">
-    <app-nav></app-nav>
+  <div class="flex min-h-screen">
+    <app-aside/>
 
-    <div class="flex flex-1 items-stretch">
-      <app-aside v-if="storeApp.asideVisible === true">aside</app-aside>
+    <div class="flex flex-col flex-1">
+      <app-nav/>
 
       <!-- container -->
-      <div class="flex-1 flex flex-col bg-grey-lighter p-2">
+      <div class="container-full">
         <div class="flex-1 p-2 bg-white">
           <router-view/>
         </div>
-
-        <!-- footer -->
-        <div class="bg-teal p-4">footer</div>
       </div>
+      <!-- footer -->
+      <div class="bg-teal p-4">footer</div>
     </div>
-
-    <!-- float tools -->
-    <app-float-bar></app-float-bar>
   </div>
 </template>
 
 <script>
-import appNav from './nav'
+import appNav from './header'
 import appAside from './aside'
-import appFloatBar from './float-bar'
 
-import { storeApp } from '@/mixins/store'
 export default {
-  mixins: [storeApp],
   components: {
     appNav,
-    appAside,
-    appFloatBar
+    appAside
   },
   mounted () {
-    // console.log('[storeApp] ', this.storeApp)
+    // todo
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+.container-full {
+  @apply flex-1 flex flex-col;
+  @apply p-2;
+  @apply bg-grey-lighter;
+}
 </style>

@@ -13,7 +13,7 @@ const store = {
     version: '0.1',
 
     // 是否显示默认侧边栏
-    asideVisible: true
+    asideVisible: null
   },
   mutations: {
 

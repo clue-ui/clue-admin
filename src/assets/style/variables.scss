@@ -2,7 +2,11 @@
 // @copyright - 2019
 
 // 默认导航设置
-// $app-nav-height:          4rem;
+$app-nav-logo:            12rem;
+$app-nav-height:          4rem;
 
 // 默认侧边栏设置
-$app-aside-width:         10rem;
+// 默认侧边栏xl屏幕下显示
+$app-aside-screen:        'xl';
+// 默认侧边栏宽度
+$app-aside-width:         12rem;
