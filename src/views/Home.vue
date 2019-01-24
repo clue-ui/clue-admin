@@ -3,17 +3,12 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <h2>Welcome to Your Vue.js App</h2>
 
-    <c-button type="primary" @click="isFold = !isFold">{{isFold ? '展开' : '折叠'}}</c-button>
-    <div class="border" :style="{
-      transition: 'max-height 400ms ease 0s',
-      position: 'relative',
-      height: isFold ? '' : '100px'
-    }">
-      <ul v-if="!isFold">
-        <li v-for="a in 1,4" :key="a">{{a}}</li>
-      </ul>
-
-      <div v-if="isFold">Menu</div>
+    <div class="border border-red mt-2">
+      <div class="flex flex-wrap bg-grey-lighter">
+        <div class="w-1/3 p-2" v-for="a in 1,11" :key="a">
+          <div class="text-grey-darker text-center bg-grey-light p-2">1</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

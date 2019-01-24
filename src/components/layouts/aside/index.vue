@@ -1,8 +1,8 @@
 <template>
-  <aside class="app-aside" :style="styleObject">
+  <aside class="app-aside" id=1100 v-if="storeApp.aside !== false">
 
     <div class="app-logo">
-      <div class="text-center flex-1 self-center">logo</div>
+      <div class="text-center flex-1 self-center">Clue Admin</div>
     </div>
 
     <p v-for="a in 1,13" :key=a>
@@ -22,8 +22,6 @@ export default {
   computed: {
     styleObject: function () {
       let asideVisible = this.storeApp.asideVisible
-
-      // 非自适应模式
       if (asideVisible !== 'auto') {
         return {
           display: asideVisible ? 'block' : 'none'
@@ -32,6 +30,12 @@ export default {
 
       return null
     }
+  },
+  mounted () {
+    // todo
+  },
+  methods: {
+    // todo
   }
 }
 </script>

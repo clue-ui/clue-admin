@@ -1,20 +1,30 @@
 <template>
   <nav class="app-nav sticky pin-t">
     <div class="nav-menus">
-      <!-- asideSwitch -->
-      <i class="nav-item aside fa fa-bars"
-        aria-hidden="true"
-        :class="{
-          'text-grey': storeApp.asideVisible === true,
-          'text-black': storeApp.asideVisible === false,
-        }"
-        @click="asideSwitch"
-      ></i>
 
+      <!-- aside 折叠按钮 -->
+      <div class="nav-item" @click="asideSwitch">
+        <i class="fa fa-lg fa-bars" aria-hidden="true"></i>
+      </div>
+
+      <!-- app-logo (小屏幕显示) -->
+      <!-- <div class="app-logo">
+        <div class="w-4 text-center">
+          <i class="fa fa-lg fa-bars" aria-hidden="true"></i>
+        </div>
+
+        <div class="flex-1 text-center">Clue Admin</div>
+        <div class="w-4 text-center">
+          <i class="fa fa-lg fa-bars" aria-hidden="true"></i>
+        </div>
+      </div> -->
+
+      <!-- menu left (大屏幕显示) -->
       <router-link class="nav-item" to="/">Home</router-link>
       <router-link class="nav-item" to="/about">About</router-link>
 
-      <div class="flex-1"></div>
+      <!-- menu right (大屏幕显示) -->
+      <div class="nav-item flex-1"></div>
       <router-link class="nav-item" to="/login">Amce</router-link>
     </div>
   </nav>
@@ -44,8 +54,17 @@ export default {
   @apply bg-blue-lighter;
   @apply flex;
 
+  .app-logo {
+    @apply text-blue;
+    @apply font-bold;
+    @apply px-2 py-2;
+    @apply block;
+    @apply flex;
+  }
+
   .nav-menus {
     @apply flex flex-1;
+    // @apply flex-col;
     @apply m-2;
     @apply self-center;
 
@@ -62,25 +81,24 @@ export default {
 
   .nav-item {
     @apply px-2 py-2;
-    // @apply mx-1;
-    // @apply border border-yellow;
-
-    &.aside {
-      // @apply hidden;
-      @apply cursor-pointer;
-      @apply text-grey;
-    }
+    // @apply hidden;
   }
 }
 
-// 菜单的自适应样式
+// 大屏幕自适应样式
 @screen #{$app-aside-screen} {
   .app-nav {
-    .nav-item {
-      &.aside {
-        @apply text-black;
-      }
+    // .app-logo {
+    //   @apply hidden;
+    // }
+
+    .nav-menus {
+      @apply flex-row;
     }
+
+    // .nav-item {
+    //   @apply block;
+    // }
   }
 }
 </style>

@@ -10,10 +10,13 @@ const store = {
   namespaced: true,
   state: {
     title: 'clue-admin',
-    version: '0.1',
+    version: '0.1.0',
 
     // 是否显示默认侧边栏
-    asideVisible: 'auto'
+    aside: true,
+
+    // 默认侧边栏当前显示状态, 默认auto自适应
+    asideVisible: 'auto',
   },
   mutations: {
 

@@ -38,4 +38,10 @@ export default {
   @apply p-2;
   @apply bg-grey-lighter;
 }
+
+// @screen #{$app-aside-screen} {
+//   .container-full {
+//     transform: translate(0, 0);
+//   }
+// }
 </style>
