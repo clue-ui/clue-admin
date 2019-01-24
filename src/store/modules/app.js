@@ -9,14 +9,18 @@
 const store = {
   namespaced: true,
   state: {
+    // 基本信息
     title: 'clue-admin',
     version: '0.1.0',
 
     // 是否显示默认侧边栏
     aside: true,
 
-    // 默认侧边栏当前显示状态, 默认auto自适应
-    asideVisible: 'auto',
+    // 侧边栏DOM节点ID
+    asideId: 1100,
+
+    // aside display 状态
+    asideDisplay: null
   },
   mutations: {
 

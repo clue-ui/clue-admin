@@ -8,18 +8,19 @@ const mixin = {
   },
   methods: {
     asideSwitch () {
-      let elAside = document.getElementById(1100)
+      let asideId = this.storeApp.asideId
+      let asideDom = document.getElementById(asideId)
 
-      let style = getComputedStyle(elAside)
-      console.log('>>>:', style)
+      if (asideDom) {
+        let style = this.$utils.getComputedStyle(asideDom)
 
-      if (style.display === 'block') {
-        elAside.style.display = 'none'
-      } else {
-        elAside.style.display = 'block'
+        // set style.display
+        let display = style.display === 'block' ? 'none' : 'block'
+        asideDom.style.display = display
+
+        // update aside display
+        this.storeApp.asideDisplay = display
       }
-    //   let asideVisible = this.storeApp.asideVisible
-    //   this.$store.dispatch('app/setAside', !asideVisible)
     }
   }
 }

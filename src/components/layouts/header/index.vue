@@ -3,8 +3,8 @@
     <div class="nav-menus">
 
       <!-- aside 折叠按钮 -->
-      <div class="nav-item" @click="asideSwitch">
-        <i class="fa fa-lg fa-bars" aria-hidden="true"></i>
+      <div class="nav-item" @click="asideSwitch" v-if="storeApp.aside === true">
+        <i class="fa fa-lg fa-bars cursor-pointer" aria-hidden="true"></i>
       </div>
 
       <!-- app-logo (小屏幕显示) -->

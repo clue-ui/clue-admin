@@ -1,5 +1,5 @@
 <template>
-  <aside class="app-aside" id=1100 v-if="storeApp.aside !== false">
+  <aside class="app-aside" :id="storeApp.asideId" v-if="storeApp.aside === true">
 
     <div class="app-logo">
       <div class="text-center flex-1 self-center">Clue Admin</div>

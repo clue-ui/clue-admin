@@ -13,6 +13,10 @@ Vue.use(ClueUI)
 // import app style
 import '@/assets/style/index.scss'
 
+// import utils
+import Utils from '@/utils'
+Vue.use(Utils)
+
 new Vue({
   router,
   store,
