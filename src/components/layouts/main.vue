@@ -1,18 +1,19 @@
 <template>
-  <div class="flex min-h-screen">
-    <app-aside/>
+  <div class="flex flex-col min-h-screen">
+    <app-nav class="sticky pin-t"/>
 
-    <div class="flex flex-col flex-1">
-      <app-nav/>
+    <div class="flex flex-1" :class="{ 'aside-open': storeApp.asideDisplay === 'block' }">
+      <app-aside/>
 
       <!-- container -->
       <div class="container-full">
-        <div class="flex-1 p-2 bg-white">
+        <div class="flex-1 m-2 p-2 bg-white">
           <router-view/>
         </div>
+
+        <!-- footer -->
+        <div class="bg-teal p-4">footer</div>
       </div>
-      <!-- footer -->
-      <div class="bg-teal p-4">footer</div>
     </div>
   </div>
 </template>
@@ -21,7 +22,10 @@
 import appNav from './header'
 import appAside from './aside'
 
+import mixin from './mixin'
 export default {
+  name: '',
+  mixins: [mixin],
   components: {
     appNav,
     appAside
@@ -35,13 +39,6 @@ export default {
 <style lang="scss" scoped>
 .container-full {
   @apply flex-1 flex flex-col;
-  @apply p-2;
   @apply bg-grey-lighter;
 }
-
-// @screen #{$app-aside-screen} {
-//   .container-full {
-//     transform: translate(0, 0);
-//   }
-// }
 </style>

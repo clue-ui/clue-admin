@@ -1,23 +1,18 @@
 <template>
-  <nav class="app-nav sticky pin-t">
+  <nav class="app-nav">
+
+    <!-- app logo -->
+    <div class="app-logo" :style="styleObject">
+      <div class="text-center flex-1 self-center">Clue Admin</div>
+    </div>
+
+    <!-- nav menus- -->
     <div class="nav-menus">
 
       <!-- aside 折叠按钮 -->
       <div class="nav-item" @click="asideSwitch" v-if="storeApp.aside === true">
         <i class="fa fa-lg fa-bars cursor-pointer" aria-hidden="true"></i>
       </div>
-
-      <!-- app-logo (小屏幕显示) -->
-      <!-- <div class="app-logo">
-        <div class="w-4 text-center">
-          <i class="fa fa-lg fa-bars" aria-hidden="true"></i>
-        </div>
-
-        <div class="flex-1 text-center">Clue Admin</div>
-        <div class="w-4 text-center">
-          <i class="fa fa-lg fa-bars" aria-hidden="true"></i>
-        </div>
-      </div> -->
 
       <!-- menu left (大屏幕显示) -->
       <router-link class="nav-item" to="/">Home</router-link>
@@ -40,6 +35,24 @@ export default {
       // model: ''
     }
   },
+  computed: {
+    styleObject: function () {
+      // if (this.storeApp.aside === true) {
+      //   let display = this.storeApp.asideDisplay
+
+      //   return {
+      //     display: display
+      //   }
+      // }
+
+      let aside = this.storeApp.aside
+      let display = this.storeApp.asideDisplay
+
+      return {
+        display: aside ? display : 'none'
+      }
+    }
+  },
   mounted () {
     //
   },
@@ -55,18 +68,16 @@ export default {
   @apply flex;
 
   .app-logo {
-    @apply text-blue;
+    min-width: $app-nav-logo;
+    @apply bg-blue-light;
     @apply font-bold;
-    @apply px-2 py-2;
-    @apply block;
-    @apply flex;
+    @apply hidden;
+    @apply py-4;
   }
 
   .nav-menus {
     @apply flex flex-1;
-    // @apply flex-col;
     @apply m-2;
-    @apply self-center;
 
     & a {
       @apply font-bold;
@@ -81,24 +92,20 @@ export default {
 
   .nav-item {
     @apply px-2 py-2;
-    // @apply hidden;
   }
 }
 
 // 大屏幕自适应样式
 @screen #{$app-aside-screen} {
   .app-nav {
-    // .app-logo {
-    //   @apply hidden;
-    // }
+    @apply flex-row;
+    .app-logo {
+      @apply block;
+    }
 
     .nav-menus {
       @apply flex-row;
     }
-
-    // .nav-item {
-    //   @apply block;
-    // }
   }
 }
 </style>

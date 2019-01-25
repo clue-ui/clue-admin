@@ -1,13 +1,10 @@
 <template>
   <aside class="app-aside" :id="storeApp.asideId" v-if="storeApp.aside === true">
-
-    <div class="app-logo">
-      <div class="text-center flex-1 self-center">Clue Admin</div>
+    <div class="">
+      <p v-for="a in 1,13" :key=a>
+        {{a}} - aside
+      </p>
     </div>
-
-    <p v-for="a in 1,13" :key=a>
-      {{a}} - aside
-    </p>
   </aside>
 </template>
 
@@ -18,18 +15,6 @@ export default {
   mixins: [mixin],
   data () {
     return {}
-  },
-  computed: {
-    styleObject: function () {
-      let asideVisible = this.storeApp.asideVisible
-      if (asideVisible !== 'auto') {
-        return {
-          display: asideVisible ? 'block' : 'none'
-        }
-      }
-
-      return null
-    }
   },
   mounted () {
     // todo
@@ -42,16 +27,9 @@ export default {
 
 <style lang="scss" scoped>
 .app-aside {
-  width: $app-aside-width;
+  min-width: $app-aside-width;
   @apply bg-grey;
   @apply hidden;
-}
-
-.app-logo {
-  width: $app-nav-logo;
-  @apply bg-blue-light;
-  @apply font-bold;
-  @apply py-4;
 }
 
 @screen #{$app-aside-screen} {
