@@ -14,11 +14,10 @@
         <i class="fa fa-lg fa-bars cursor-pointer" aria-hidden="true"></i>
       </div>
 
-      <!-- menu left (大屏幕显示) -->
       <router-link class="nav-item" to="/">Home</router-link>
+      <router-link class="nav-item" to="/wysiwyg/quill">Quill</router-link>
       <router-link class="nav-item" to="/about">About</router-link>
 
-      <!-- menu right (大屏幕显示) -->
       <div class="nav-item flex-1"></div>
       <router-link class="nav-item" to="/login">Amce</router-link>
     </div>
@@ -65,7 +64,7 @@ export default {
 <style lang="scss" scoped>
 .app-nav {
   @apply bg-blue-lighter;
-  @apply flex;
+  @apply flex z-10;
 
   .app-logo {
     min-width: $app-nav-logo;

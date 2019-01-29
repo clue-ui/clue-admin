@@ -15,6 +15,11 @@ export default new Router({
           component: () => import(/* webpackChunkName: "about" */ './views/home.vue')
         },
         {
+          path: '/wysiwyg/quill',
+          name: 'quill',
+          component: () => import(/* webpackChunkName: "about" */ './views/wysiwyg/quill.vue')
+        },
+        {
           path: '/about',
           name: 'about',
           // route level code-splitting

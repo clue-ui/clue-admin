@@ -1,6 +1,6 @@
 # Clue - Admin
 
-### 核心组建
+## 核心组建
 * vue
 * vue-cli3
 * vue-router
@@ -9,7 +9,7 @@
 * tailwindcss
 * clue-ui
 
-### 目录结构
+## 目录结构
 ```
 .
 ├── README.md
@@ -19,7 +19,7 @@
 ├── src
 │    ├── App.vue
 │    ├── assets                    // 样式、资源
-│    ├── clue-ui                   // clue ui 组建库, 不建议修改
+│    ├── clue-ui                   // clue ui 组建库
 │    ├── components                // 业务组建
 │    ├── layout                    // 页面布局
 │    └── mixins                    // 公共混入方法, store引入接口
@@ -33,11 +33,25 @@
 └── yarn.lock
 ```
 
-### store 模块说明
+## Store 模块说明
+### 模块定义
+ `sotre 模块位置: store/modules目录, 已注册模块如下:`
 
-#### storeApp 应用配置
+ * storeApp 应用配置
+ * storeUser 当前登陆用户信息
 
-#### storeUser 当前登陆用户信息
+### store 使用说明
+```
+import { storeApp } from '@/mixins/store'
 
-### 等待完善
+export default {
+  mixins: [storeApp],
+  created: {
+    // this.storeApp
+  }
+}
+
+```
+
+## 等待完善
   ...
