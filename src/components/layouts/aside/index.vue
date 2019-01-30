@@ -1,24 +1,15 @@
 <template>
   <aside class="app-aside" :id="storeApp.asideId" v-if="storeApp.aside === true">
-
-    <aside-menu></aside-menu>
-
-    <!-- <ul class="list-reset">
-      <li v-for="(m1, idx1) in menus" :key="idx1">
-        <app-menu-item :label="m1.label" :icon="m1.icon" :to="m1.path"></app-menu-item>
-
-        <ul>
-          <li><div>aaa-11</div></li>
-          <li><div>aaa-22</div></li>
-          <li><div>aaa-33</div></li>
-        </ul>
-      </li>
-    </ul> -->
+    <ul class="app-aside-menu">
+      <aside-menu v-for="(m, idx) in menus"
+        :model="m"
+        :key="idx"
+      ></aside-menu>
+    </ul>
   </aside>
 </template>
 
 <script>
-// import appMenuItem from './menu-item'
 import AsideMenu from './aside-menu'
 
 import mixin from '../mixin'
@@ -37,73 +28,83 @@ export default {
     this.menus = [
       {
         label: '仪表盘',
-        icon: 'fa fa-ravelry',
-        path: ''
+        icon: 'fa fa-dashboard text-green-light',
+        path: 'bb'
+      }, {
+        label: '超长文字描述测试超长文字描述测试',
+        icon: 'fa fa-car text-yellow',
+        children: [
+          {
+            label: 'Wysiwyg Quill',
+            icon: 'fa fa-circle-o',
+            path: '/wysiwyg/quill'
+          }
+        ]
       }, {
         label: '组建列表',
-        icon: 'fa fa-ravelry',
+        icon: 'fa fa-snowflake-o text-teal-light',
         children: [
           {
             label: 'button 按钮',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }, {
             label: 'icon 图标',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }, {
             label: 'table',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }, {
             label: 'tabs',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }
         ]
       }, {
-        label: '表单组建',
-        icon: '',
+        label: '表单组件',
+        icon: 'fa fa-laptop text-pink-light',
         children: [
           {
             label: 'input 输入框',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }, {
             label: 'form',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }, {
             label: 'checkbox',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }, {
             label: 'radio',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }, {
             label: 'select',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }
         ]
       }, {
-        label: '测试',
-        icon: 'fa fa-ravelry',
+        label: '多级菜单',
+        icon: 'fa fa-share text-blue-light',
         children: [
           {
             label: 'AAAA',
-            icon: '',
+            icon: 'fa fa-circle-o',
             children: [
               {
                 label: 'AAAA-1',
-                icon: '',
+                icon: 'fa fa-circle-o',
                 path: ''
               }
             ]
           }, {
             label: 'BBBBB',
-            icon: '',
+            icon: 'fa fa-circle-o',
             path: ''
           }
         ]
@@ -120,8 +121,9 @@ export default {
 
 <style lang="scss" scoped>
 .app-aside {
-  min-width: $app-aside-width;
-  @apply bg-grey;
+  // min-width: $app-aside-width;
+  width: $app-aside-width;
+  @apply #{$app-aside-bgcolor};
   @apply hidden;
 
   .aside-menu-item {

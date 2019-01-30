@@ -68,7 +68,8 @@ export default {
 
   .app-logo {
     min-width: $app-nav-logo;
-    @apply bg-blue-light;
+    @apply text-white bg-blue;
+    // @apply text-white bg-black;
     @apply font-bold;
     @apply hidden;
     @apply py-4;

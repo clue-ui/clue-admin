@@ -12,7 +12,7 @@
         </div>
 
         <!-- footer -->
-        <div class="bg-teal p-4">footer</div>
+        <!-- <div class="text-grey bg-grey-dark p-4">footer</div> -->
       </div>
     </div>
   </div>

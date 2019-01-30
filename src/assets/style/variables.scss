@@ -1,11 +1,16 @@
 // 网站样式配置
 // @copyright - 2019
 
-// 默认导航设置
+// default nav menu
 $app-nav-logo:            12rem;
 $app-nav-height:          4rem;
 
-// 默认侧边栏自适应规则
-$app-aside-screen:        'lg';
-// 默认侧边栏宽度
-$app-aside-width:         12rem;
+// default aside
+$app-aside-screen:        'lg';                   // 侧边栏自适应规则
+$app-aside-width:         12rem;                  // 侧边栏宽度
+
+$app-aside-bgcolor:       'bg-grey-darkest';      // 侧边栏背景色
+$app-aside-color:         'text-grey-light';      // 侧边栏链接颜色
+$app-aside-bl-color:      'border-grey';    // 侧边栏激活时左侧边框颜色
+$app-aside-hover-color:   'text-white';
+$app-aside-hover-bgcolor: rgba(0, 0, 0, 0.2);

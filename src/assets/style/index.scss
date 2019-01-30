@@ -8,6 +8,6 @@
   @apply relative;
 }
 
-// input,a:focus {
-//   outline: none;
-// }
+ul,li {
+  @apply list-reset;
+}
