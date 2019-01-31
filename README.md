@@ -53,5 +53,10 @@ export default {
 
 ```
 
+## 左侧菜单配置
+ `store/config/aside-menus.js`
+
+ 也可通过更新storeApp.asideMenus实现服务器端动态更新
+
 ## 等待完善
   ...

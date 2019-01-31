@@ -6,6 +6,8 @@
  * @copyright [description]
  */
 
+import asideMenus from '../config/aside-menus.js'
+
 const store = {
   namespaced: true,
   state: {
@@ -20,7 +22,10 @@ const store = {
     asideId: 'sidebar',
 
     // aside display 状态
-    asideDisplay: null
+    asideDisplay: null,
+
+    // 侧边栏菜单配置
+    asideMenus: asideMenus
   },
   mutations: {
 
