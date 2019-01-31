@@ -25,7 +25,6 @@ let menus = [
   }, {
     label: '用户管理',
     icon: 'fa fa-user-o',
-    open: true,
     children: [
       {
         label: '新建用户',
