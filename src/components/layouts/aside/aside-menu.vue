@@ -77,7 +77,7 @@ export default {
 
 <style lang="scss" scoped>
 .menu-item {
-  @apply px-3 py-2;
+  @apply pr-2 py-2;
   @apply block;
 
   @apply #{$app-aside-color};

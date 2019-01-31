@@ -29,8 +29,8 @@ export default {
   @apply #{$app-aside-bgcolor};
   @apply hidden;
 
-  .aside-menu-item {
-    @apply cursor-pointer;
+  .app-aside-menu {
+    @apply pt-2;
   }
 }
 
