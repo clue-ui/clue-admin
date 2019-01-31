@@ -2,7 +2,7 @@
   <li>
     <!-- menu item -->
     <div class="menu-item" :class="{ 'link-exact-active': linkActive }" :style="styleObject" @click="toggle">
-      <i v-if="model.icon" :class="model.icon" class="px-2" aria-hidden="true"></i>
+      <i v-if="model.icon" :class="model.icon" class="w-6 mr-1 text-center" aria-hidden="true"></i>
       <span class="inline-block">{{model.label}}</span>
     </div>
 
@@ -30,7 +30,7 @@ export default {
   },
   data () {
     return {
-      isOpen: true
+      isOpen: false
     }
   },
   computed: {

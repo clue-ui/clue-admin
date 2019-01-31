@@ -17,17 +17,24 @@ let menus = [
         icon: 'fa fa-circle-o',
         path: '/wysiwyg/quill'
       }, {
-        label: 'Page About',
-        icon: 'fa fa-circle-o',
-        path: '/about'
-      }, {
-        label: 'Page About2',
-        icon: 'fa fa-circle-o',
-        path: '/about?a=2'
-      }, {
         label: '外链测试 - 未实现',
         icon: 'fa fa-circle-o',
         path: 'http://www.baidu.com'
+      }
+    ]
+  }, {
+    label: '用户管理',
+    icon: 'fa fa-user-o',
+    open: true,
+    children: [
+      {
+        label: '新建用户',
+        icon: 'fa fa-circle-o',
+        path: ''
+      }, {
+        label: '新建用户',
+        icon: 'fa fa-circle-o',
+        path: ''
       }
     ]
   }, {
@@ -98,6 +105,10 @@ let menus = [
         path: ''
       }
     ]
+  }, {
+    label: '小工具',
+    icon: 'fa fa-cubes text-teal-light',
+    path: '/tools'
   }
 ]
 
