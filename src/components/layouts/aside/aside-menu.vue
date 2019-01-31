@@ -2,7 +2,7 @@
   <li>
     <!-- menu item -->
     <div class="menu-item" :class="{ 'link-exact-active': linkActive }" :style="styleObject" @click="toggle">
-      <i v-if="model.icon" :class="model.icon" class="w-6 mr-1 text-center" aria-hidden="true"></i>
+      <i v-if="model.icon" :class="model.icon" aria-hidden="true"></i>
       <span class="inline-block">{{model.label}}</span>
     </div>
 
@@ -103,6 +103,11 @@ export default {
     @apply #{$app-aside-hover-color};
     @apply border-l-2;
     @apply #{$app-aside-bl-color};
+  }
+
+  // menu-item > icon
+  &>i {
+    @apply w-6 mr-1 text-center;
   }
 }
 </style>
