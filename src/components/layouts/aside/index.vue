@@ -47,7 +47,7 @@ export default {
           {
             label: 'button 按钮',
             icon: 'fa fa-circle-o',
-            path: ''
+            path: 'http://www.baidu.com'
           }, {
             label: 'icon 图标',
             icon: 'fa fa-circle-o',

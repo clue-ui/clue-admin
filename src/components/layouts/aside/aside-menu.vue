@@ -1,7 +1,7 @@
 <template>
   <li>
     <!-- menu item -->
-    <div class="menu-item" :style="styleObject" @click="toggle">
+    <div class="menu-item" :class="{ 'link-exact-active': linkActive }" :style="styleObject" @click="toggle">
       <i v-if="model.icon" :class="model.icon" class="px-2" aria-hidden="true"></i>
       <span class="inline-block">{{model.label}}</span>
     </div>
@@ -30,11 +30,18 @@ export default {
   },
   data () {
     return {
-      activeUrl: '',
       isOpen: true
     }
   },
   computed: {
+    linkActive: function () {
+      let path = this.$route.path
+      if (path && path === this.model.path) {
+        return true
+      }
+
+      return false
+    },
     isChildren: function () {
       return this.model.children && this.model.children.length
     },
@@ -56,7 +63,13 @@ export default {
       }
     },
     onRouter () {
-      console.log('[router-to]: ', this.model)
+      let path = {
+        name: this.model.name || null,
+        path: this.model.path || null
+      }
+
+      console.log('[router-push] ', path)
+      this.$router.push(path)
     }
   }
 }
@@ -86,7 +99,7 @@ export default {
     @apply #{$app-aside-bl-color};
   }
 
-  &.router-link-exact-active {
+  &.link-exact-active {
     @apply #{$app-aside-hover-color};
     @apply border-l-2;
     @apply #{$app-aside-bl-color};
