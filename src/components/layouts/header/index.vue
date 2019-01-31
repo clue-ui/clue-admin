@@ -29,11 +29,6 @@ import mixin from '../mixin'
 export default {
   name: 'app-nav',
   mixins: [mixin],
-  data () {
-    return {
-      // model: ''
-    }
-  },
   computed: {
     styleObject: function () {
       let aside = this.storeApp.aside
@@ -43,12 +38,6 @@ export default {
         display: aside ? display : 'none'
       }
     }
-  },
-  mounted () {
-    //
-  },
-  methods: {
-    // todo
   }
 }
 </script>

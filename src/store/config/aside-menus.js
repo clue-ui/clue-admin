@@ -95,7 +95,13 @@ let menus = [
           {
             label: 'AAAA-1',
             icon: 'fa fa-circle-o',
-            path: ''
+            children: [
+              {
+                label: 'ABC',
+                icon: 'fa fa-circle-o',
+                path: '/aa/bb/cc'
+              }
+            ]
           }
         ]
       }, {

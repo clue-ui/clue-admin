@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '',
@@ -17,6 +18,10 @@ export default new Router({
         {
           path: '/wysiwyg/quill',
           name: 'quill',
+          component: () => import(/* webpackChunkName: "about" */ './views/wysiwyg/quill.vue')
+        },
+        {
+          path: '/aa/bb/cc',
           component: () => import(/* webpackChunkName: "about" */ './views/wysiwyg/quill.vue')
         },
         {

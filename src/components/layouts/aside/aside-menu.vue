@@ -7,11 +7,12 @@
     </div>
 
     <!-- children menu -->
-    <ul v-if="isOpen && isChildren">
+    <ul v-show="isOpen && isChildren">
       <aside-menu v-for="(m, idx) in model.children"
         :model="m"
         :level="level+1"
         :key="idx"
+        @setOpen="setOpen"
       ></aside-menu>
     </ul>
   </li>
@@ -37,6 +38,9 @@ export default {
     linkActive: function () {
       let path = this.$route.fullPath
       if (path && path === this.model.path) {
+        // 展开父级节点
+        this.$emit('setOpen', true)
+
         return true
       }
 
@@ -51,16 +55,25 @@ export default {
       }
     }
   },
-  mounted () {
-    // todo, 当前激活链接
-  },
   methods: {
+    /**
+     * 菜单展开/折叠
+     * @return {[type]} [description]
+     */
     toggle () {
       if (this.isChildren) {
         this.isOpen = !this.isOpen
       } else {
         this.onRouter()
       }
+    },
+    /**
+     * 自动展开父级菜单
+     * @param {[type]} val [description]
+     */
+    setOpen (val) {
+      this.isOpen = val
+      this.$emit('setOpen', true)
     },
     onRouter () {
       let path = this.model.path
