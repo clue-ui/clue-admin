@@ -38,6 +38,18 @@ export default {
             label: 'Wysiwyg Quill',
             icon: 'fa fa-circle-o',
             path: '/wysiwyg/quill'
+          }, {
+            label: 'Page About',
+            icon: 'fa fa-circle-o',
+            path: '/about'
+          }, {
+            label: 'Page About2',
+            icon: 'fa fa-circle-o',
+            path: '/about?a=2'
+          }, {
+            label: '外链测试 - 未实现',
+            icon: 'fa fa-circle-o',
+            path: 'http://www.baidu.com'
           }
         ]
       }, {
@@ -47,15 +59,15 @@ export default {
           {
             label: 'button 按钮',
             icon: 'fa fa-circle-o',
-            path: 'http://www.baidu.com'
+            path: '/about?a=1'
           }, {
             label: 'icon 图标',
             icon: 'fa fa-circle-o',
-            path: ''
+            path: '/about?a=22'
           }, {
             label: 'table',
             icon: 'fa fa-circle-o',
-            path: ''
+            path: '/about?a=3'
           }, {
             label: 'tabs',
             icon: 'fa fa-circle-o',

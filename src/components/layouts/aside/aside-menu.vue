@@ -35,7 +35,7 @@ export default {
   },
   computed: {
     linkActive: function () {
-      let path = this.$route.path
+      let path = this.$route.fullPath
       if (path && path === this.model.path) {
         return true
       }
@@ -63,13 +63,13 @@ export default {
       }
     },
     onRouter () {
-      let path = {
-        name: this.model.name || null,
-        path: this.model.path || null
-      }
+      let path = this.model.path
 
-      console.log('[router-push] ', path)
-      this.$router.push(path)
+      if (path && path.length) {
+        this.$router.push({
+          path: path
+        })
+      }
     }
   }
 }

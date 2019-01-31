@@ -14,7 +14,7 @@
         <i class="fa fa-lg fa-bars cursor-pointer" aria-hidden="true"></i>
       </div>
 
-      <router-link class="nav-item" to="/">Home</router-link>
+      <!-- <router-link class="nav-item" to="/">Home</router-link> -->
       <router-link class="nav-item" to="/wysiwyg/quill">Quill</router-link>
       <router-link class="nav-item" to="/about">About</router-link>
 
@@ -36,14 +36,6 @@ export default {
   },
   computed: {
     styleObject: function () {
-      // if (this.storeApp.aside === true) {
-      //   let display = this.storeApp.asideDisplay
-
-      //   return {
-      //     display: display
-      //   }
-      // }
-
       let aside = this.storeApp.aside
       let display = this.storeApp.asideDisplay
 
@@ -69,7 +61,6 @@ export default {
   .app-logo {
     min-width: $app-nav-logo;
     @apply text-white bg-blue;
-    // @apply text-white bg-black;
     @apply font-bold;
     @apply hidden;
     @apply py-4;
@@ -85,7 +76,7 @@ export default {
       color: #2c3e50;
     }
 
-    & a.router-link-exact-active {
+    & a.router-link-active {
       color: #42b983;
     }
   }
