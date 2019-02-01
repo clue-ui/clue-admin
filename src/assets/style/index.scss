@@ -11,6 +11,10 @@
   @apply relative;
 }
 
+h2,h3 {
+  @apply my-2;
+}
+
 ul,li {
   @apply list-reset;
 }

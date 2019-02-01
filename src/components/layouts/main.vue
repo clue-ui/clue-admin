@@ -7,7 +7,7 @@
 
       <!-- container -->
       <div class="container-full">
-        <div class="flex-1 m-2 p-2 bg-white">
+        <div class="flex-1 m-2 p-4 bg-white">
           <router-view/>
         </div>
 
