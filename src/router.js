@@ -8,21 +8,26 @@ export default new Router({
   routes: [
     {
       path: '',
-      component: () => import(/* webpackChunkName: "layout" */ './components/layouts/main.vue'),
+      component: () => import(/* webpackChunkName: "chunk.main" */ './components/layouts/main.vue'),
       children: [
         {
           path: '/',
           name: 'home',
-          component: () => import(/* webpackChunkName: "about" */ './views/home.vue')
+          component: () => import(/* webpackChunkName: "chunk.about" */ './views/home.vue')
+        },
+        {
+          path: '/site/option',
+          name: 'site-option',
+          component: () => import(/* webpackChunkName: "chunk.site" */ './views/site/option.vue')
         },
         {
           path: '/wysiwyg/quill',
           name: 'quill',
-          component: () => import(/* webpackChunkName: "about" */ './views/wysiwyg/quill.vue')
+          component: () => import(/* webpackChunkName: "chunk.wysiwyg" */ './views/wysiwyg/quill.vue')
         },
         {
           path: '/aa/bb/cc',
-          component: () => import(/* webpackChunkName: "about" */ './views/wysiwyg/quill.vue')
+          component: () => import(/* webpackChunkName: "chunk.abc" */ './views/wysiwyg/quill.vue')
         },
         {
           path: '/about',
@@ -30,14 +35,19 @@ export default new Router({
           // route level code-splitting
           // this generates a separate chunk (about.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
-          component: () => import(/* webpackChunkName: "about" */ './views/about.vue')
+          component: () => import(/* webpackChunkName: "chunk.about" */ './views/about.vue')
+        },
+        {
+          path: '*',
+          name: 'not-found',
+          component: () => import(/* webpackChunkName: "chunk.about" */ './views/not-found.vue')
         }
       ]
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import(/* webpackChunkName: "about" */ './views/login')
+      component: () => import(/* webpackChunkName: "login" */ './views/login')
     }
   ]
 })

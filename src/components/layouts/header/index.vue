@@ -3,7 +3,7 @@
 
     <!-- app logo -->
     <div class="app-logo" :style="styleObject">
-      <div class="text-center flex-1 self-center">Clue Admin</div>
+      <span class="self-center cursor-pointer" @click="$router.push('/')">Clue Admin</span>
     </div>
 
     <!-- nav menus- -->
@@ -49,7 +49,8 @@ export default {
   @apply flex z-10;
 
   .app-logo {
-    min-width: $app-nav-logo;
+    width: $app-nav-logo-width;
+    @apply text-center;
     @apply text-white bg-blue;
     @apply font-bold;
     @apply hidden;

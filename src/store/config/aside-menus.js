@@ -5,9 +5,9 @@
 
 let menus = [
   {
-    label: '仪表盘',
-    icon: 'fa fa-dashboard text-green-light',
-    path: 'bb'
+    label: '系统配置',
+    icon: 'fa fa-cogs text-green-lighter',
+    path: '/site/option'
   }, {
     label: '超长文字描述测试超长文字描述测试',
     icon: 'fa fa-car text-yellow',

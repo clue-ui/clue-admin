@@ -1,16 +1,20 @@
 // 网站样式配置
 // @copyright - 2019
 
-// default nav menu
-$app-nav-logo:            12rem;
-$app-nav-height:          4rem;
+// 网站样式定义
+$app-font-color:          '#2c3e50';              // 网站字体颜色
+$app-font-size:           '14px';                 // 网站字体大小
 
-// default aside
+// 网站导航定义
+$app-nav-height:          4rem;
+$app-nav-logo-width:     12rem;
+
+// 网站侧边栏定义
 $app-aside-screen:        'lg';                   // 侧边栏自适应规则
 $app-aside-width:         12rem;                  // 侧边栏宽度
 
 $app-aside-bgcolor:       'bg-grey-darkest';      // 侧边栏背景色
-$app-aside-color:         'text-grey-light';      // 侧边栏链接颜色
-$app-aside-bl-color:      'border-grey';    // 侧边栏激活时左侧边框颜色
+$app-aside-color:         'text-grey';            // 侧边栏链接颜色
+$app-aside-bl-color:      'border-grey';          // 侧边栏激活时左侧边框颜色
 $app-aside-hover-color:   'text-white';
 $app-aside-hover-bgcolor: rgba(0, 0, 0, 0.2);
