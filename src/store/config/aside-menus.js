@@ -23,19 +23,17 @@ let menus = [
       }
     ]
   }, {
-    label: '用户管理',
-    icon: 'fa fa-user-o',
-    children: [
-      {
-        label: '新建用户',
-        icon: 'fa fa-circle-o',
-        path: ''
-      }, {
-        label: '新建用户',
-        icon: 'fa fa-circle-o',
-        path: ''
-      }
-    ]
+    label: '会员管理',
+    icon: 'fa fa-id-card-o',
+    path: '/members'
+  }, {
+    label: '优惠劵管理',
+    icon: 'fa fa-random',
+    path: '/coupon'
+  }, {
+    label: '商品管理',
+    icon: 'fa fa-random text-orange-light',
+    path: '/coupon'
   }, {
     label: '组建列表',
     icon: 'fa fa-snowflake-o text-teal-light',
