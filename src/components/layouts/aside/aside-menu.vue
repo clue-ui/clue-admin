@@ -7,14 +7,16 @@
     </div>
 
     <!-- children menu -->
-    <ul v-show="isOpen && isChildren">
-      <aside-menu v-for="(m, idx) in model.children"
-        :model="m"
-        :level="level+1"
-        :key="idx"
-        @setOpen="setOpen"
-      ></aside-menu>
-    </ul>
+    <template v-if="isChildren">
+      <ul v-show="isOpen">
+        <aside-menu v-for="(m, idx) in model.children"
+          :model="m"
+          :level="level+1"
+          :key="idx"
+          @setOpen="setOpen"
+        ></aside-menu>
+      </ul>
+    </template>
   </li>
 </template>
 
