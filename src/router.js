@@ -4,6 +4,8 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 import members from '@/views/members/router'
+import pickup from '@/views/pickup/router'
+import site from '@/views/site/router'
 
 export default new Router({
   mode: 'history',
@@ -17,12 +19,9 @@ export default new Router({
           name: 'home',
           component: () => import(/* webpackChunkName: "chunk.about" */ './views/home.vue')
         },
-        ...members,
-        {
-          path: '/site/option',
-          name: 'site-option',
-          component: () => import(/* webpackChunkName: "chunk.site" */ './views/site/option.vue')
-        },
+        ...members.route,
+        ...pickup.route,
+        ...site.route,
         {
           path: '/wysiwyg/quill',
           name: 'quill',
