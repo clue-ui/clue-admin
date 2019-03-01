@@ -7,7 +7,6 @@
 
 export default {
   name: 'clue-ui/pickup',
-  auth: 'fxue',
   descript: '网页路径拾取',
   route: [
     {

@@ -1,12 +1,15 @@
 // app style
-#app {
+html, body {
+  font-size: #{$app-font-size};
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #{$app-font-color};
-  font-size: #{$app-font-size};
-
   @apply relative;
+}
+
+#app {
+  // todo
 }
 
 h2,h3 {

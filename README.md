@@ -58,5 +58,25 @@ export default {
 
  也可通过更新storeApp.asideMenus实现服务器端动态更新
 
+
+## 页面样式约定
+
+比如 about页面
+```
+<div class="clue about">
+  <div class="xxxx"></div>
+</div>
+
+<style lang="scss">
+.clue.about {
+  .about {
+    .xxxx {
+      @apply border;
+    }
+  }
+}
+</style>
+```
+
 ## 等待完善
   ...

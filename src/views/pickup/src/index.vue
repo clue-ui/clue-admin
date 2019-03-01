@@ -1,10 +1,13 @@
 <template>
-  <div class="pickup">
+  <div class="clue pickup">
     <h2>Welcome to Your About Page</h2>
 
-
     <div>
-      <iframe class="pickup iframe" src="http://www.baidu.com"></iframe>
+      <c-button type="primary">拾取</c-button>
+    </div>
+
+    <div class="mt-2">
+      <iframe class="pickup iframe" src="https://www.baidu.com"></iframe>
     </div>
   </div>
 </template>
