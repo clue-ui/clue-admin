@@ -18,6 +18,7 @@
       <router-link class="nav-item" to="/wysiwyg/quill">Quill</router-link>
       <router-link class="nav-item" to="/aa/bb/cc">ABC</router-link>
       <router-link class="nav-item" to="/pickup">Pickup</router-link>
+      <router-link class="nav-item" to="/book"><i class="fa fa-book" aria-hidden="true">&nbsp;Book</i></router-link>
       <router-link class="nav-item" to="/about">About</router-link>
 
       <div class="nav-item flex-1"></div>

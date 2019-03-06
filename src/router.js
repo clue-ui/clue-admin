@@ -6,6 +6,7 @@ Vue.use(Router)
 import members from '@/views/members/router'
 import pickup from '@/views/pickup/router'
 import site from '@/views/site/router'
+import book from '@/views/book/router'
 
 export default new Router({
   mode: 'history',
@@ -21,6 +22,7 @@ export default new Router({
         },
         ...members.route,
         ...pickup.route,
+        ...book.route,
         ...site.route,
         {
           path: '/wysiwyg/quill',

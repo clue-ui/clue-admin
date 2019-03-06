@@ -7,7 +7,7 @@
     </div>
 
     <div class="mt-2">
-      <iframe class="pickup iframe" src="https://www.baidu.com"></iframe>
+      <iframe class="pickup iframe" name="pfm" src="https://code-miku.com/d/7-x-frame-options"></iframe>
     </div>
   </div>
 </template>

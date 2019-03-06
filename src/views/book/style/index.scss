@@ -1,0 +1,9 @@
+.clue.pickup {
+  .pickup {
+    &.iframe {
+      @apply w-full;
+      height: 400px;
+      @apply border;
+    }
+  }
+}

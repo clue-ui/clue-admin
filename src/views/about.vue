@@ -2,9 +2,15 @@
   <div class="about">
     <h2>Welcome to Your About Page</h2>
 
-    <ul>
-      <li v-for="a in 1, 114" :key="a">{{a}}</li>
-    </ul>
+
+    <div class="border border-red border-2" style="width: 600px; height: 400px;">
+      <c-resize class="ab-resize">
+
+        <!-- <div slot="footer" class="bg-blue">[x]</div> -->
+      </c-resize>
+    </div>
+
+
   </div>
 </template>
 
@@ -16,3 +22,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.ab-resize {
+  @apply border border-blue;
+  width: 200px;
+  height: 100px;
+}
+</style>
