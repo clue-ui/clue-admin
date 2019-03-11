@@ -7,7 +7,7 @@
       <div class="clue table-col">{{v.time}}</div>
 
       <div class="clue table-col">
-        <c-button>操作</c-button>
+        <c-button class="text-xs">操作</c-button>
       </div>
     </div>
   </div>

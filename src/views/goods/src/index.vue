@@ -1,7 +1,11 @@
 <template>
   <div class="clue goods">
-    <h2>Welcome to Your About Page</h2>
-    <div>筛选区域</div>
+    <div>
+      <div class="flex">
+        <c-input></c-input>
+        <!-- <c-button>Search</c-button> -->
+      </div>
+    </div>
 
     <goods-list class="mt-2"></goods-list>
   </div>
