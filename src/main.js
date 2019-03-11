@@ -14,6 +14,7 @@ Vue.use(ClueUI)
 import '@/assets/style/index.scss'
 import '@/views/site/style/index.scss'
 import '@/views/pickup/style/index.scss'
+import '@/views/goods/style/index.scss'
 
 // import utils
 import Utils from '@/utils'

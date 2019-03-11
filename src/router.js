@@ -3,10 +3,11 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+import site from '@/views/site/router'
 import members from '@/views/members/router'
 import pickup from '@/views/pickup/router'
-import site from '@/views/site/router'
 import book from '@/views/book/router'
+import goods from '@/views/goods/router'
 
 export default new Router({
   mode: 'history',
@@ -24,6 +25,7 @@ export default new Router({
         ...pickup.route,
         ...book.route,
         ...site.route,
+        ...goods.route,
         {
           path: '/wysiwyg/quill',
           name: 'quill',

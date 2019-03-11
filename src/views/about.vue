@@ -15,8 +15,12 @@
 </template>
 
 <script>
+import CResize from '@/clue-ui/components/resize'
 export default {
   name: 'about',
+  components: {
+    CResize
+  },
   data () {
     return {}
   }

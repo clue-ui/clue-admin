@@ -33,7 +33,7 @@ let menus = [
   }, {
     label: '商品管理',
     icon: 'fa fa-random text-orange-light',
-    path: '/item'
+    path: '/goods'
   }, {
     label: '组建列表',
     icon: 'fa fa-snowflake-o text-teal-light',
