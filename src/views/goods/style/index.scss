@@ -1,5 +1,16 @@
 .goods-list {
-  //
+
+  .goods-info {
+    @apply flex;
+    .goods-img {
+      max-height: 80px;
+      @apply mr-2;
+    }
+
+    .goods-title {
+
+    }
+  }
 }
 
 .clue.table {
@@ -8,17 +19,21 @@
 }
 
 .clue.table-row {
-  @apply flex;
+  @apply flex items-center;
   @apply py-2;
-  @apply border-b;
 
-  &:first-child {
-    @apply border-t;
-  }
+  @apply my-2;
+  @apply border rounded;
+
+  // @apply border-b;
+
+  // &:first-child {
+  //   @apply border-t;
+  // }
 }
 
 .clue.table-col {
-  @apply flex-1;
+  // @apply flex-1;
   @apply p-1;
   // @apply border;
 }
